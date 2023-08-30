@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+h1{
+  font-family: "Space Grotesk", sans-serif; 
+  font-size: calc(1.375rem + 1vw) ;
+color: white;
+}
+body,:root,html{
+  overflow-x: hidden;
+}
+ 
+div[name="react-console-emulator"]::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 12px; 
+
+}
+
+div[name="react-console-emulator"]::-webkit-scrollbar-track {
+  background: rgba(56, 4, 40, 0.9);;
+  margin-bottom: 10px;}
+
+div[name="react-console-emulator"]::-webkit-scrollbar-thumb {
+  background-color: #8f54a0;
+  border-radius: 10px; 
+  border: 3px solid rgba(56, 4, 40, 0.9);
+}
+.proje li::before {
+    content: "\2022";  
+    color: white;
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em;  
+}
+ 
+@keyframes minimizeEffect {
+  0%  {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(0.85);
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.minimize {
+  animation-name: minimizeEffect;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes maximizeEffect {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.maximize {
+  animation-name: maximizeEffect;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
