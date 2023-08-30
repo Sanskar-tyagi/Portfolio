@@ -7,10 +7,9 @@ const userSchema = new mongoose.Schema({
   name: String,
   message: String,
 });
-
+import MongoURI from "./private";
 const UserTable = mongoose.model("User", userSchema);
-const mongoURI =
-  "mongodb+srv://Tyagi:VsiZ6iyBA4TZy2ep@cluster0.nmn9br7.mongodb.net/?retryWrites=true&w=majority";
+const mongoURI = MongoURI;
 app.use(express.json());
 app.use(cors());
 app.post("/Post", async (req, res) => {
