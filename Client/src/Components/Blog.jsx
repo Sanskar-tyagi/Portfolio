@@ -541,6 +541,8 @@ export default function Blog({ data, profile }) {
     node = tag.innerText;
     return node;
   };
+  const src1="https://miro.medium.com/v2/resize:fit:0/1*WNBckTbWOz4HurZNE_nFhg.png"
+  const src2="https://miro.medium.com/v2/resize:fit:0/1*U46wL5wOt20PSuFrVPMbOw.png"
   return (
     <Container className=" z-10">
       <div className="leftBG absolute w-100 h-100"></div>
@@ -565,7 +567,7 @@ export default function Blog({ data, profile }) {
               >
                 <div className="inner-element">
                   <div class="blog-article">
-                    <img className={`bg-white ${posts?.title === "Unlocking the Power of Closures: A Journey into JavaScript’s Hidden Gems" ? "object-contain" : " object-cover"}`} src={posts.thumbnail} alt="" />
+                    <img className={`bg-white ${posts?.title === "Unlocking the Power of Closures: A Journey into JavaScript’s Hidden Gems" ? "object-contain" : " object-cover"}`} src={`${posts.title=="The Idea of Inheritance in JS"?src2:src1}`} alt="" />
                     <h2>{posts.title}</h2>
                     <div class="blog-detail">
                       <span>By {posts.author}</span>
